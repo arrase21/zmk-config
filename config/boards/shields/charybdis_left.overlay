@@ -1,0 +1,18 @@
+#include "charybdis.dtsi"
+&kscan0 {
+	col-gpios
+		= <&esp32 25 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Columna 1
+		, <&esp32 26 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Columna 2
+		, <&esp32 27 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Columna 3
+		, <&esp32 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Columna 4
+		, <&esp32 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Columna 5
+		;
+};
+
+&kscan1 {
+	row-gpios
+		= <&esp32 32 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>  // Fila 1
+		, <&esp32 33 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>  // Fila 2
+		, <&esp32 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>  // Fila 3
+		;
+};
